@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>TellMeWeather</title>
+</head>
+<body>
+<center>
+    <h2>TellMeWeather</h2>
+
+    <div style="text-align: center;">
+        <form method="post" action="/">
+            <input type="text" placeholder="City" name="city">
+            <input type="submit" value="Show weather">
+        </form>
+    </div><br><br>
+
+    <div>
+
+    </div>
+
+    <div th:if="${city} != null">
+        <table style="text-align: left; border: black; border-style: solid">
+            <tr>
+                <td>City: </td>
+                <td><span th:text="${city}"></span></td>
+            </tr>
+            <tr>
+                <td>Country: </td>
+                <td><span th:text="${country}"></span></td>
+            </tr>
+            <tr>
+                <td>Temperature: </td>
+                <td><span th:text="${temperature}"></span></td>
+            </tr>
+            <tr>
+                <td>Pressure: </td>
+                <td><span th:text="${pressure}"></span></td>
+            </tr>
+            <tr>
+                <td>Humidity: </td>
+                <td><span th:text="${humidity}"></span></td>
+            </tr>
+            <tr>
+                <td>Cloudiness: </td>
+                <td><span th:text="${cloudiness}"></span></td>
+            </tr>
+            <tr>
+                <td>Sunrise: </td>
+                <td><span th:text="${sunrise}"></span></td>
+            </tr>
+            <tr>
+                <td>Sunset: </td>
+                <td><span th:text="${sunset}"></span></td>
+            </tr>
+        </table><br>
+    </div>
+</center>
+</body>
+</html>
